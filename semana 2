@@ -1,0 +1,13 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+    <head> 
+    <meta charset="UTF-8"> 
+        <title>Página de Prueba</title> 
+    </head> 
+    <body> 
+        <!-- Imagen insertada -->
+    <img src="img/UEA-LOGO.png" alt="Logo UEA" width="300">
+
+        <h1>Hola soy Yuri Loor estudiante de tegnologias de la informacion, soy de la provincia de Manabi</h1>
+    </body> 
+</html>
