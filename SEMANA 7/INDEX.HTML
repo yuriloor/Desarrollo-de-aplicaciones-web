@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Productos</title>
+
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .contenedor {
+            background-color: white;
+            padding: 20px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 8px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lista de Productos</h1>
+
+    <div class="contenedor">
+
+        <ul id="lista-productos"></ul>
+
+        <input type="text" id="nombre" placeholder="Nombre del producto">
+        <input type="number" id="precio" placeholder="Precio">
+        <input type="text" id="descripcion" placeholder="Descripción">
+
+        <button id="btn-agregar">Agregar producto</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
