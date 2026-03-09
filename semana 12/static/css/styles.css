@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+}
+
+nav a {
+    color: yellow;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    margin-top: 50px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
