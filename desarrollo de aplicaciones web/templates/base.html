@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistema de Venta de Tecnología</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<header class="header">
+    <h1>💻 Sistema de Venta de Tecnología</h1>
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/about">Acerca de</a>
+        <a href="/productos">Productos</a>
+        <a href="/clientes">Clientes</a>
+    </nav>
+</header>
+
+<main class="contenido">
+    {% block content %}
+    {% endblock %}
+</main>
+
+<footer class="footer">
+    <p>© 2026 - Proyecto Flask</p>
+</footer>
+
+</body>
+</html>

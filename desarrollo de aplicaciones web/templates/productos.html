@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Inventario de Productos</h2>
+
+<!-- 📥 DESCARGAS -->
+<h3>Descargar datos</h3>
+<a href="/descargar_txt">📥 TXT</a> |
+<a href="/descargar_json">📥 JSON</a> |
+<a href="/descargar_csv">📥 CSV</a>
+
+<hr>
+
+<!-- 🔍 BUSCADOR CON AUTOCOMPLETE -->
+<h3>Buscar Producto</h3>
+
+<input type="text" id="buscador" placeholder="Escribe para buscar...">
+
+<ul id="sugerencias" style="list-style:none; padding:0;"></ul>
+
+<a href="/productos">🔄 Ver todos</a>
+
+<hr>
+
+<!-- ➕ AGREGAR -->
+<form action="/agregar" method="POST">
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="number" name="cantidad" placeholder="Cantidad" required>
+    <input type="number" step="0.01" name="precio" placeholder="Precio" required>
+    <button type="submit">Agregar</button>
+</form>
+
+<hr>
+
+<!-- 📋 TABLA -->
+<table border="1" style="margin:auto;">
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Cantidad</th>
+        <th>Precio</th>
+        <th>Acción</th>
+    </tr>
+
+    {% for p in productos %}
+    <tr>
+        <td>{{ p.id }}</td>
+        <td>{{ p.nombre }}</td>
+        <td>{{ p.cantidad }}</td>
+        <td>${{ p.precio }}</td>
+        <td>
+            <a href="/eliminar/{{ p.id }}" onclick="return confirm('¿Eliminar producto?')">
+                ❌ Eliminar
+            </a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<!-- 🔥 JAVASCRIPT (AQUÍ VA) -->
+<script>
+const buscador = document.getElementById("buscador");
+const sugerencias = document.getElementById("sugerencias");
+
+buscador.addEventListener("keyup", function() {
+    let texto = buscador.value;
+
+    if (texto.length === 0) {
+        sugerencias.innerHTML = "";
+        return;
+    }
+
+    fetch(`/autocomplete?q=${texto}`)
+        .then(response => response.json())
+        .then(data => {
+            sugerencias.innerHTML = "";
+
+            data.forEach(item => {
+                let li = document.createElement("li");
+                li.textContent = item;
+
+                li.style.cursor = "pointer";
+                li.style.padding = "5px";
+
+                li.onclick = () => {
+                    buscador.value = item;
+                    sugerencias.innerHTML = "";
+                };
+
+                sugerencias.appendChild(li);
+            });
+        });
+});
+</script>
+
+{% endblock %}

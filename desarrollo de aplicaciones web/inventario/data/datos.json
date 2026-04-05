@@ -1,0 +1,82 @@
+[
+    {
+        "nombre": "mause",
+        "cantidad": "2",
+        "precio": "1"
+    },
+    {
+        "nombre": "mause",
+        "cantidad": "2",
+        "precio": "222"
+    },
+    {
+        "nombre": "mause",
+        "cantidad": "2",
+        "precio": "2"
+    },
+    {
+        "nombre": "lapto",
+        "cantidad": "2",
+        "precio": "12"
+    },
+    {
+        "nombre": "mause",
+        "cantidad": "2",
+        "precio": "23"
+    },
+    {
+        "nombre": "mause",
+        "cantidad": "4",
+        "precio": "34"
+    },
+    {
+        "nombre": "mause",
+        "cantidad": "1",
+        "precio": "11"
+    },
+    {
+        "nombre": "mause",
+        "cantidad": "3",
+        "precio": "3"
+    },
+    {
+        "nombre": "lapto",
+        "cantidad": "3",
+        "precio": "333"
+    },
+    {
+        "nombre": "lapto ms",
+        "cantidad": "3",
+        "precio": "755"
+    },
+    {
+        "nombre": "audifonos",
+        "cantidad": "23",
+        "precio": "234"
+    },
+    {
+        "nombre": "teclado",
+        "cantidad": "2",
+        "precio": "34"
+    },
+    {
+        "nombre": "lapto",
+        "cantidad": "3",
+        "precio": "3"
+    },
+    {
+        "nombre": "mause",
+        "cantidad": "2",
+        "precio": "43"
+    },
+    {
+        "nombre": "audifonos",
+        "cantidad": "2",
+        "precio": "20"
+    },
+    {
+        "nombre": "audifonos",
+        "cantidad": "2",
+        "precio": "20"
+    }
+]

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Datos</h2>
+
+<table border="1" style="margin:auto;">
+    <tr>
+        <th>Nombre</th>
+        <th>Cantidad</th>
+        <th>Precio</th>
+    </tr>
+
+    {% for d in datos %}
+    <tr>
+        <td>{{ d.nombre }}</td>
+        <td>{{ d.cantidad }}</td>
+        <td>${{ d.precio }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
